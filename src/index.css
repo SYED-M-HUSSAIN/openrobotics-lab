@@ -1,0 +1,181 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom color variables for better combinations */
+    --primary-blue: 221 83% 53%;
+    --primary-green: 142 76% 36%;
+    --accent-orange: 24 95% 53%;
+    --neutral-gray: 220 14% 96%;
+    --text-primary: 220 39% 11%;
+    --text-secondary: 220 13% 46%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 221 83% 53%;
+
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 27.9% 16.9%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 215 27.9% 16.9%;
+    --sidebar-ring: 221 83% 53%;
+
+    /* Custom color variables for dark mode */
+    --primary-blue: 221 83% 53%;
+    --primary-green: 142 76% 36%;
+    --accent-orange: 24 95% 53%;
+    --neutral-gray: 215 27.9% 16.9%;
+    --text-primary: 213 31% 91%;
+    --text-secondary: 217.9 10.6% 64.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors;
+  }
+
+  /* Custom classes for improved color combinations */
+  .bg-primary-blue {
+    background-color: hsl(var(--primary-blue));
+  }
+
+  .bg-primary-green {
+    background-color: hsl(var(--primary-green));
+  }
+
+  .bg-accent-orange {
+    background-color: hsl(var(--accent-orange));
+  }
+
+  .text-primary-blue {
+    color: hsl(var(--primary-blue));
+  }
+
+  .text-primary-green {
+    color: hsl(var(--primary-green));
+  }
+
+  .text-accent-orange {
+    color: hsl(var(--accent-orange));
+  }
+
+  .border-primary-blue {
+    border-color: hsl(var(--primary-blue));
+  }
+
+  /* Dark mode styles for the main application */
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+
+  /* Updated gradient combinations */
+  .dark .bg-gradient-to-br.from-blue-50.to-orange-50 {
+    @apply from-slate-800 to-slate-700;
+  }
+
+  .dark .bg-white {
+    @apply bg-slate-800;
+  }
+
+  .dark .text-gray-900 {
+    @apply text-slate-100;
+  }
+
+  .dark .text-gray-600 {
+    @apply text-slate-400;
+  }
+
+  .dark .text-gray-700 {
+    @apply text-slate-300;
+  }
+
+  .dark .text-gray-800 {
+    @apply text-slate-200;
+  }
+
+  .dark .border-gray-300 {
+    @apply border-slate-600;
+  }
+
+  .dark .shadow-lg {
+    @apply shadow-2xl shadow-black/20;
+  }
+}
