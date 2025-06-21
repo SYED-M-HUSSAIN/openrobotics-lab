@@ -71,12 +71,12 @@ Choose one of the following options:
 
    For development:
    ```bash
-   docker-compose --profile dev up
+   docker compose --profile dev up
    ```
 
    For production:
    ```bash
-   docker-compose up
+   docker compose up
    ```
 
 3. **Access the application**
@@ -87,19 +87,19 @@ Choose one of the following options:
 
 ```bash
 # Build and run production
-docker-compose up --build
+docker compose up --build
 
 # Run in background
-docker-compose up -d
+docker compose up -d
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 
 # Stop containers
-docker-compose down
+docker compose down
 
 # Rebuild after changes
-docker-compose up --build --force-recreate
+docker compose up --build --force-recreate
 ```
 
 ## 🛠️ Tech Stack
